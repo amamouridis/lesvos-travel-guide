@@ -6,26 +6,6 @@ export default function Home() {
         <div className="bg-black/40 backdrop-blur-md p-6 rounded-xl shadow-xl">
           <h1 className="text-4xl font-bold text-center">Discover Lesvos</h1>
           <p className="text-center mt-2 text-lg">Beaches • Villages • Culture • Nature</p>
-          {/* Featured Categories */}
-      <section className="max-w-5xl w-full mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
-        
-        <div className="bg-gray-900 p-6 rounded-xl text-center border border-gray-700">
-          <h2 className="text-xl font-semibold">Beaches</h2>
-        </div>
-
-        <div className="bg-gray-900 p-6 rounded-xl text-center border border-gray-700">
-          <h2 className="text-xl font-semibold">Villages</h2>
-        </div>
-
-        <div className="bg-gray-900 p-6 rounded-xl text-center border border-gray-700">
-          <h2 className="text-xl font-semibold">Culture</h2>
-        </div>
-
-        <div className="bg-gray-900 p-6 rounded-xl text-center border border-gray-700">
-          <h2 className="text-xl font-semibold">Nature</h2>
-        </div>
-
-      </section>
         </div>
       </section>
 
