@@ -14,14 +14,15 @@ export default function BeachesPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-black text-white px-6 pt-32 pb-16 bg-[url('/beach.jpg')] bg-cover bg-center bg-fixed">
+    <main className="min-h-screen bg-black text-white px-6 pt-32 pb-16 bg-[url('/beach.jpg')] bg-cover bg-center bg-fixed relative">\
+
       <h1 className="text-4xl font-bold text-center mb-10">Beaches of Lesvos</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]">
         {beaches.map((b, i) => (
           <div 
             key={i}
-            className="bg-gray-900 rounded-xl border border-gray-700 shadow-lg overflow-hidden hover:scale-[1.02] transition-transform"
+            className="bg-gray-900/80 backdrop-blur-sm rounded-xl border border-gray-700 shadow-xl overflow-hidden hover:scale-[1.03] transition-transform"
           >
             <img src={b.img} alt={b.name} className="h-48 w-full object-cover" />
 
