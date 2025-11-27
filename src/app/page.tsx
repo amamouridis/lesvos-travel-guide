@@ -11,12 +11,15 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="mt-16 py-6 text-center text-gray-400 text-sm border-t border-gray-800 w-full">
-        <p>
-          © 2025 <span className="text-gray-200 font-semibold">Lesvos Travel</span> • Designed & Developed by{" "}
-          <a href="#" className="text-blue-400 hover:underline">Angelos Mamouridis</a>
-        </p>
-      </footer>
+      <footer className="mt-20 py-6 text-center text-gray-400 text-sm border-t border-white/10 w-full">
+  <p>
+    © 2025 Lesvos Travel • Designed & Developed by{" "}
+    <a href="https://amamouridis.github.io/portfolio/" 
+       className="text-blue-400 hover:underline">
+      Angelos Mamouridis
+    </a>
+  </p>
+</footer>
 
     </main>
   );
