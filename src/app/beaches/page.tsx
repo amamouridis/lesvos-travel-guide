@@ -32,6 +32,17 @@ export default function BeachesPage() {
           </div>
         ))}
       </div>
+      {/* Footer */}
+      <footer className="mt-20 py-6 text-center text-gray-400 text-sm border-t border-white/10 w-full">
+  <p>
+    © 2025 Lesvos Travel • Designed & Developed by{" "}
+    <a href="https://amamouridis.github.io/portfolio/" 
+       className="text-blue-400 hover:underline">
+      Angelos Mamouridis
+    </a>
+  </p>
+</footer>
+
     </main>
   );
 }
