@@ -43,7 +43,7 @@ export default function BeachDetails({ params }: { params: { slug: string } }) {
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 px-6 pt-6 max-w-4xl mx-auto">
         <Link href="/" className="hover:underline">Αρχική σελίδα</Link> ›{" "}
-        <Link href="/beaches" className="hover:underline">Παραλίες</Link> ›{" "}
+        <Link href="/beaches/vatera" className="hover:underline">Παραλίες</Link> ›{" "}
         <span className="text-gray-800">{beach.name}</span>
       </nav>
 
@@ -83,7 +83,7 @@ export default function BeachDetails({ params }: { params: { slug: string } }) {
 
       {/* Back button */}
       <div className="max-w-4xl mx-auto px-6 mt-10">
-        <Link href="/beaches">
+        <Link href="/beaches/">
           <button className="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transition">
             ← Επιστροφή στις παραλίες
           </button>
