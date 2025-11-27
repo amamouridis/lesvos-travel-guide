@@ -14,7 +14,7 @@ export default function BeachesPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-black text-white px-6 pt-32 pb-16 bg-[url('/plomari-beach.jpg')] bg-cover bg-center bg-fixed">
+    <main className="min-h-screen bg-black text-white px-6 pt-32 pb-16 bg-[url('/beach.jpg')] bg-cover bg-center bg-fixed">
       <h1 className="text-4xl font-bold text-center mb-10">Beaches of Lesvos</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
