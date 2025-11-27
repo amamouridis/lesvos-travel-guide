@@ -30,7 +30,7 @@ export default function BeachesPage() {
               <div className="bg-gray-900/80 backdrop-blur-sm rounded-xl border border-gray-700 shadow-xl overflow-hidden hover:scale-[1.03] transition-transform cursor-pointer">
                 
                 <img src={b.img} alt={b.name} className="h-48 w-full object-cover" />
-                
+
                 <div className="p-5">
                   <h2 className="text-2xl font-semibold mb-2">{b.name}</h2>
                   <p className="text-gray-300 text-sm">{b.desc}</p>
