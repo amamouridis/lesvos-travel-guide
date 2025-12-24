@@ -14,7 +14,7 @@ export default function NavBar() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-lg font-bold tracking-wide text-neutral-900"
+          className="text-lg font-bold bg-white/80 tracking-wide text-neutral-900"
         >
           Lesvos Travel Guide
         </Link>
@@ -36,7 +36,7 @@ export default function NavBar() {
             </button>
 
             {exploreOpen && (
-              <div className="absolute top-8 left-0 bg-white shadow-lg rounded-lg py-3 w-48 text-sm">
+              <div className="absolute top-8 left-0 bg-black shadow-lg rounded-lg py-3 w-48 text-sm">
                 <Link
                   href="/beaches"
                   className="block px-4 py-2 hover:bg-neutral-100"
