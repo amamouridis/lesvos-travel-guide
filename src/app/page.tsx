@@ -14,7 +14,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="max-w-xl bg-black/40 backdrop-blur-md p-8 rounded-xl shadow-xl">
               <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-                Ανακαλύψτε τη Λέσβο <br /> σαν ντόπιος
+                Ανακαλύψτε τη Λέσβο <br /> με τον απόλυτο οδηγό ταξιδιών
               </h1>
 
               <p className="mt-4 text-lg text-gray-200">
