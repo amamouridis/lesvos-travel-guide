@@ -4,60 +4,128 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function NavBar() {
-  const [open, setOpen] = useState(false);
-
-  const links = [
-    { name: "Home", href: "/" },
-    { name: "Beaches", href: "/beaches" },
-    { name: "Villages", href: "/villages" },
-    { name: "Culture", href: "/culture" },
-    { name: "Nature", href: "/nature" },
-    { name: "About", href: "/about" },
-  ];
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [exploreOpen, setExploreOpen] = useState(false);
 
   return (
-    <nav className="w-full border-b border-gray-700 bg-black/60 backdrop-blur-md text-white fixed top-0 left-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-black/10">
+      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold tracking-wide">
-          Lesvos Travel
+        <Link
+          href="/"
+          className="text-lg font-bold tracking-wide text-neutral-900"
+        >
+          Lesvos Travel Guide
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6">
-          {links.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="hover:text-yellow-300 transition-colors"
-            >
-              {link.name}
-            </Link>
-          ))}
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <Link href="/" className="hover:text-yellow-600 transition">
+            Home
+          </Link>
+
+          {/* Explore Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setExploreOpen(true)}
+            onMouseLeave={() => setExploreOpen(false)}
+          >
+            <button className="hover:text-yellow-600 transition">
+              Explore
+            </button>
+
+            {exploreOpen && (
+              <div className="absolute top-8 left-0 bg-white shadow-lg rounded-lg py-3 w-48 text-sm">
+                <Link
+                  href="/beaches"
+                  className="block px-4 py-2 hover:bg-neutral-100"
+                >
+                  Beaches
+                </Link>
+                <Link
+                  href="/culture"
+                  className="block px-4 py-2 hover:bg-neutral-100"
+                >
+                  Culture & History
+                </Link>
+                <Link
+                  href="/activities"
+                  className="block px-4 py-2 hover:bg-neutral-100"
+                >
+                  Activities
+                </Link>
+                <Link
+                  href="/maps"
+                  className="block px-4 py-2 hover:bg-neutral-100"
+                >
+                  Maps
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <Link href="/villages" className="hover:text-yellow-600 transition">
+            Villages
+          </Link>
+
+          <Link href="/food" className="hover:text-yellow-600 transition">
+            Food
+          </Link>
+
+          <Link href="/nature" className="hover:text-yellow-600 transition">
+            Nature
+          </Link>
+
+          <Link href="/about" className="hover:text-yellow-600 transition">
+            About
+          </Link>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile button */}
         <button
-          className="md:hidden"
-          onClick={() => setOpen(!open)}
+          className="md:hidden text-2xl"
+          onClick={() => setMobileOpen(!mobileOpen)}
         >
           ☰
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {open && (
-        <div className="md:hidden bg-black border-t border-gray-700">
-          {links.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="block px-4 py-3 hover:bg-gray-800"
-            >
-              {link.name}
+      {mobileOpen && (
+        <div className="md:hidden bg-white border-t border-black/10 px-6 py-4 space-y-3 text-sm">
+          <Link href="/" onClick={() => setMobileOpen(false)}>
+            Home
+          </Link>
+
+          <div className="pt-2 border-t border-black/10">
+            <p className="text-xs uppercase text-gray-400 mb-2">Explore</p>
+            <Link href="/beaches" onClick={() => setMobileOpen(false)}>
+              Beaches
             </Link>
-          ))}
+            <Link href="/culture" onClick={() => setMobileOpen(false)}>
+              Culture & History
+            </Link>
+            <Link href="/activities" onClick={() => setMobileOpen(false)}>
+              Activities
+            </Link>
+            <Link href="/maps" onClick={() => setMobileOpen(false)}>
+              Maps
+            </Link>
+          </div>
+
+          <Link href="/villages" onClick={() => setMobileOpen(false)}>
+            Villages
+          </Link>
+          <Link href="/food" onClick={() => setMobileOpen(false)}>
+            Food
+          </Link>
+          <Link href="/nature" onClick={() => setMobileOpen(false)}>
+            Nature
+          </Link>
+          <Link href="/about" onClick={() => setMobileOpen(false)}>
+            About
+          </Link>
         </div>
       )}
     </nav>
