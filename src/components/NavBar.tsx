@@ -2,6 +2,16 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+
+const pathname = usePathname();
+
+const isEnglish = pathname.startsWith("/en");
+
+const toggleLanguage = isEnglish
+  ? pathname.replace("/en", "") || "/"
+  : `/en${pathname}`;
+
 
 export default function NavBar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -64,6 +74,12 @@ export default function NavBar() {
               </div>
             )}
           </div>
+            <button
+      onClick={() => window.location.href = toggleLanguage}
+  className="text-sm px-3 py-1 rounded-full border border-black/20 hover:bg-black hover:text-white transition"
+>
+  {isEnglish ? "EL" : "EN"}
+</button>
 
           <Link href="/villages" className="hover:text-yellow-600 transition">
             Villages
