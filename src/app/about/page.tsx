@@ -43,7 +43,7 @@ export default function AboutPage() {
 
         {/* Contact button */}
         <a 
-          href="mailto:amamouridis.dev@gmail.com"
+          href="mailto:angelosmamouridis@gmail.com"
           className="inline-block mt-4 px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition"
         >
           Contact Me
