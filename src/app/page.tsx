@@ -1,78 +1,139 @@
-import Sidebar from "../components/Sidebar";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen bg-black text-white">
+    <main className="flex flex-col min-h-screen bg-neutral-100 text-neutral-900">
 
-      {/* Hero Section */}
-      <section className="relative w-full h-screen bg-[url('/petra.jpg')] bg-cover bg-center flex items-center justify-center">
-        <div className="absolute inset-0 bg-black/50" />
+      {/* ================= HERO SECTION ================= */}
+      <section className="relative w-full h-screen bg-[url('/petra.jpg')] bg-cover bg-center">
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40" />
 
-        <div className="relative z-10 max-w-2xl text-center px-6">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Discover Lesvos like a local
-          </h1>
+        {/* Content */}
+        <div className="relative z-10 h-full flex items-center">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="max-w-xl bg-black/40 backdrop-blur-md p-8 rounded-xl shadow-xl">
+              <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                Ανακαλύψτε τη Λέσβο <br /> σαν ντόπιος
+              </h1>
 
-          <p className="mt-4 text-lg text-gray-200">
-            Villages, beaches & authentic food — hand-picked, no tourist traps
-          </p>
+              <p className="mt-4 text-lg text-gray-200">
+                Παραλίες, χωριά & αυθεντικό φαγητό — χωρίς τουριστικές παγίδες
+              </p>
 
-          <div className="mt-8 flex justify-center gap-4">
-            <Link
-              href="/villages"
-              className="px-6 py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition"
-            >
-              Explore Villages
-            </Link>
-
-            <Link
-              href="/beaches"
-              className="px-6 py-3 rounded-full border border-white/70 hover:bg-white hover:text-black transition"
-            >
-              Best Beaches
-            </Link>
+              <Link
+                href="/villages"
+                className="inline-block mt-6 px-6 py-3 rounded-lg bg-yellow-600 text-white font-semibold hover:bg-yellow-700 transition"
+              >
+                Ξεκινήστε την περιήγηση
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Quick Explore Section */}
-      <section className="w-full max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <div>
-          <h3 className="text-xl font-semibold">Villages</h3>
-          <p className="text-gray-400 mt-2">
-            Traditional villages, local life & hidden gems.
-          </p>
-        </div>
+      {/* ================= QUICK CATEGORIES ================= */}
+      <section className="w-full max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {[
+          {
+            title: "Παραλίες",
+            desc: "Οι καλύτερες παραλίες του νησιού",
+            img: "/beach.jpg",
+            href: "/beaches",
+          },
+          {
+            title: "Χωριά",
+            desc: "Τα πιο γραφικά χωριά της Λέσβου",
+            img: "/village.jpg",
+            href: "/villages",
+          },
+          {
+            title: "Φύση & Πεζοπορίες",
+            desc: "Μονοπάτια και φυσικά τοπία",
+            img: "/nature.jpg",
+            href: "/nature",
+          },
+          {
+            title: "Ταβέρνες & Φαγητό",
+            desc: "Αυθεντικές γεύσεις και τοπικά στέκια",
+            img: "/food.jpg",
+            href: "/food",
+          },
+        ].map((item) => (
+          <Link
+            key={item.title}
+            href={item.href}
+            className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition"
+          >
+            <img
+              src={item.img}
+              alt={item.title}
+              className="h-40 w-full object-cover group-hover:scale-105 transition"
+            />
+            <div className="p-4">
+              <h3 className="font-semibold text-lg">{item.title}</h3>
+              <p className="text-sm text-gray-600 mt-1">{item.desc}</p>
+            </div>
+          </Link>
+        ))}
+      </section>
 
-        <div>
-          <h3 className="text-xl font-semibold">Beaches</h3>
-          <p className="text-gray-400 mt-2">
-            From organized bays to wild untouched shores.
-          </p>
-        </div>
+      {/* ================= FEATURED DESTINATIONS ================= */}
+      <section className="w-full max-w-6xl mx-auto px-6 pb-24">
+        <h2 className="text-2xl font-semibold mb-8">
+          Κορυφαίοι Προορισμοί στη Λέσβο
+        </h2>
 
-        <div>
-          <h3 className="text-xl font-semibold">Food & Taverns</h3>
-          <p className="text-gray-400 mt-2">
-            Authentic local food worth the stop.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Μόλυβος",
+              subtitle: "Μεσαιωνικό γραφικό χωριό",
+              img: "/molyvos.jpg",
+            },
+            {
+              title: "Παραλία Βατερά",
+              subtitle: "Η μεγαλύτερη παραλία του νησιού",
+              img: "/vatera.jpg",
+            },
+            {
+              title: "Πλωμάρι",
+              subtitle: "Ούζο, θάλασσα & παράδοση",
+              img: "/plomari.jpg",
+            },
+          ].map((place) => (
+            <div
+              key={place.title}
+              className="relative rounded-xl overflow-hidden group"
+            >
+              <img
+                src={place.img}
+                alt={place.title}
+                className="h-64 w-full object-cover group-hover:scale-105 transition"
+              />
+              <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4">
+                <h3 className="text-white text-lg font-semibold">
+                  {place.title}
+                </h3>
+                <p className="text-gray-200 text-sm">{place.subtitle}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="mt-auto py-6 text-center text-gray-400 text-sm border-t border-white/10">
+      {/* ================= FOOTER ================= */}
+      <footer className="mt-auto py-6 text-center text-gray-500 text-sm border-t border-black/10">
         <p>
-          © 2025 Lesvos Travel • Designed & Developed by{" "}
+          © 2025 Lesvos Travel Guide • Designed & Developed by{" "}
           <a
             href="https://amamouridis.github.io/portfolio/"
-            className="text-blue-400 hover:underline"
+            className="text-blue-500 hover:underline"
           >
             Angelos Mamouridis
           </a>
         </p>
       </footer>
-
     </main>
   );
 }
