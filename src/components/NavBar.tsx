@@ -14,7 +14,7 @@ export default function NavBar() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-lg font-bold bg-white/80 tracking-wide text-neutral-900"
+          className="text-white lg font-bold tracking-wide text-neutral-900"
         >
           Lesvos Travel Guide
         </Link>
