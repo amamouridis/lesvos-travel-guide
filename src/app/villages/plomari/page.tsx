@@ -113,7 +113,7 @@ export default function PlomariPage() {
 
             <p className="mt-2 text-xs text-gray-500">
               <a
-                href="https://www.google.com/maps/place/Plomari,+Greece"
+                href="https://www.google.com/maps/place/Πλωμάρι,+Ελλάδα"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
