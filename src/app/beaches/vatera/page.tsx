@@ -24,10 +24,10 @@ export default function VateraPage() {
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center text-white px-6">
           <h1 className="text-4xl md:text-5xl font-bold">
-            Παραλία Βατερά
+            Beach of Vatera
           </h1>
           <p className="mt-2 text-lg text-gray-200">
-            Η μεγαλύτερη παραλία της Λέσβου
+            The largest beach in Lesvos, perfect for relaxation and family holidays.
           </p>
         </div>
       </section>
@@ -42,10 +42,9 @@ export default function VateraPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-3">Γιατί να πας</h2>
             <p className="text-gray-700 leading-relaxed">
-              Τα Βατερά είναι μια εκτεταμένη αμμώδης παραλία στη νότια Λέσβο,
-              ιδανική για χαλαρές διακοπές δίπλα στη θάλασσα. Ο συνδυασμός
-              απλωτής παραλίας, καθαρών νερών και παραθαλάσσιων ταβερνών
-              την κάνει αγαπημένη επιλογή για οικογένειες αλλά και ζευγάρια.
+              Vatera is an extensive sandy beach in southern Lesvos, a ideal for relaxing holidays by the sea. The combination
+              floating beach, clean water and seaside taverns
+              makes it a favorite choice for families and couples.
             </p>
           </div>
 
@@ -53,10 +52,10 @@ export default function VateraPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-3">Highlights</h2>
             <ul className="list-disc pl-5 text-gray-700 space-y-2">
-              <li>Πολύ μεγάλη σε μήκος, ιδανική για περίπατο</li>
-              <li>Ρηχά νερά – κατάλληλη για παιδιά</li>
-              <li>Ταβέρνες και καφέ κυριολεκτικά πάνω στο κύμα</li>
-              <li>Όμορφα ηλιοβασιλέματα</li>
+              <li> Very large in length, ideal for walking </li>
+              <li> Dry waters – suitable for children </li>
+              <li> Taverns and coffee literally on the wave </li>
+              <li> Beautiful sunsets </li>
             </ul>
           </div>
 
@@ -64,10 +63,10 @@ export default function VateraPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-3">Χρήσιμες πληροφορίες</h2>
             <ul className="text-gray-700 space-y-2">
-              <li><strong>Τύπος:</strong> Αμμώδης</li>
-              <li><strong>Οργάνωση:</strong> Ομπρέλες & ξαπλώστρες σε σημεία</li>
-              <li><strong>Πρόσβαση:</strong> Εύκολη με αυτοκίνητο</li>
-              <li><strong>Ιδανική για:</strong> Οικογένειες, χαλάρωση</li>
+              <li> <strong> Type: </strong> Sandy </li>
+              <li> <strong> Organization: </strong> Umbrellas & sunbeds in places </li>
+              <li> <strong> Access: </strong> Easy by car </li>
+              <li> <strong> Ideal for: </strong> Families, relaxation </li>
             </ul>
           </div>
         </div>
@@ -77,7 +76,7 @@ export default function VateraPage() {
 
           {/* Map */}
           <div className="bg-white rounded-xl shadow p-4">
-            <h3 className="font-semibold mb-3">Τοποθεσία</h3>
+            <h3 className="font-semibold mb-3">Location</h3>
             <div className="w-full h-48 bg-neutral-200 flex items-center justify-center text-sm text-gray-500">
               Map coming soon
             </div>
@@ -85,16 +84,16 @@ export default function VateraPage() {
 
           {/* Nearby */}
           <div className="bg-white rounded-xl shadow p-4">
-            <h3 className="font-semibold mb-3">Κοντά στα Βατερά</h3>
+            <h3 className="font-semibold mb-3">Nearby Vatera</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 🏘{" "}
                 <Link href="/villages/plomari" className="text-blue-600 hover:underline">
-                  Πλωμάρι
+                  Plomari
                 </Link>
               </li>
-              <li>🍽 Ταβέρνες παραλίας</li>
-              <li>🏖 Μικρότερες ήσυχες παραλίες στην περιοχή</li>
+              <li>🍽 Seafront taverns</li>
+              <li>🏖 Smaller quieter beaches in the area</li>
             </ul>
           </div>
         </aside>
