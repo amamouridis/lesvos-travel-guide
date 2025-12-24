@@ -40,7 +40,7 @@ export default function VateraPage() {
 
           {/* Overview */}
           <div>
-            <h2 className="text-2xl font-semibold mb-3">Γιατί να πας</h2>
+            <h2 className="text-2xl font-semibold mb-3">Why you should go</h2>
             <p className="text-gray-700 leading-relaxed">
               Vatera is an extensive sandy beach in southern Lesvos, a ideal for relaxing holidays by the sea. The combination
               floating beach, clean water and seaside taverns
@@ -61,7 +61,7 @@ export default function VateraPage() {
 
           {/* Practical info */}
           <div>
-            <h2 className="text-2xl font-semibold mb-3">Χρήσιμες πληροφορίες</h2>
+            <h2 className="text-2xl font-semibold mb-3">Useful Informations</h2>
             <ul className="text-gray-700 space-y-2">
               <li> <strong> Type: </strong> Sandy </li>
               <li> <strong> Organization: </strong> Umbrellas & sunbeds in places </li>
