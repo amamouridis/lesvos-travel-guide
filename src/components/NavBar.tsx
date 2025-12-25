@@ -2,20 +2,18 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
-
-const pathname = usePathname();
-
-const isEnglish = pathname.startsWith("/en");
-
-const toggleLanguage = isEnglish
-  ? pathname.replace("/en", "") || "/"
-  : `/en${pathname}`;
-
+import { usePathname, useRouter } from "next/navigation";
 
 export default function NavBar() {
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [exploreOpen, setExploreOpen] = useState(false);
+
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const isEnglish = pathname.startsWith("/en");
+  const toggleLanguage =
+    isEnglish ? pathname.replace("/en", "") || "/" : `/en${pathname}`;
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-black/10">
@@ -24,14 +22,14 @@ export default function NavBar() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-white lg font-bold tracking-wide text-neutral-900"
+          className="text-white text-lg font-bold tracking-wide"
         >
           Lesvos Travel Guide
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
-          <Link href="/" className="hover:text-yellow-600 transition">
+        <div className="hidden md:flex items-center space-x-8 text-sm font-medium text-white">
+          <Link href="/" className="hover:text-yellow-400 transition">
             Home
           </Link>
 
@@ -41,66 +39,68 @@ export default function NavBar() {
             onMouseEnter={() => setExploreOpen(true)}
             onMouseLeave={() => setExploreOpen(false)}
           >
-            <button className="hover:text-yellow-600 transition">
+            <button className="hover:text-yellow-400 transition">
               Explore
             </button>
 
             {exploreOpen && (
-              <div className="absolute top-8 left-0 bg-black shadow-lg rounded-lg py-3 w-48 text-sm">
+              <div className="absolute top-8 left-0 bg-black rounded-lg py-3 w-48 shadow-lg">
                 <Link
                   href="/beaches"
-                  className="block px-4 py-2 hover:bg-neutral-100"
+                  className="block px-4 py-2 hover:bg-white/10"
                 >
                   Beaches
                 </Link>
                 <Link
                   href="/culture"
-                  className="block px-4 py-2 hover:bg-neutral-100"
+                  className="block px-4 py-2 hover:bg-white/10"
                 >
                   Culture & History
                 </Link>
                 <Link
                   href="/activities"
-                  className="block px-4 py-2 hover:bg-neutral-100"
+                  className="block px-4 py-2 hover:bg-white/10"
                 >
                   Activities
                 </Link>
                 <Link
                   href="/maps"
-                  className="block px-4 py-2 hover:bg-neutral-100"
+                  className="block px-4 py-2 hover:bg-white/10"
                 >
                   Maps
                 </Link>
               </div>
             )}
           </div>
-            <button
-      onClick={() => window.location.href = toggleLanguage}
-  className="text-sm px-3 py-1 rounded-full border border-black/20 hover:bg-black hover:text-white transition"
->
-  {isEnglish ? "EL" : "EN"}
-</button>
 
-          <Link href="/villages" className="hover:text-yellow-600 transition">
+          <Link href="/villages" className="hover:text-yellow-400 transition">
             Villages
           </Link>
 
-          <Link href="/food" className="hover:text-yellow-600 transition">
+          <Link href="/food" className="hover:text-yellow-400 transition">
             Food
           </Link>
 
-          <Link href="/nature" className="hover:text-yellow-600 transition">
+          <Link href="/nature" className="hover:text-yellow-400 transition">
             Nature
           </Link>
 
-          <Link href="/about" className="hover:text-yellow-600 transition">
+          <Link href="/about" className="hover:text-yellow-400 transition">
             About
           </Link>
+
+          {/* Language Toggle */}
+          <button
+            onClick={() => router.push(toggleLanguage)}
+            className="ml-4 px-3 py-1 rounded-full border border-white/40 text-xs hover:bg-white hover:text-black transition"
+          >
+            {isEnglish ? "EL" : "EN"}
+          </button>
         </div>
 
         {/* Mobile button */}
         <button
-          className="md:hidden text-2xl"
+          className="md:hidden text-2xl text-white"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           ☰
@@ -109,12 +109,12 @@ export default function NavBar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-black/10 px-6 py-4 space-y-3 text-sm">
+        <div className="md:hidden bg-black text-white border-t border-white/10 px-6 py-4 space-y-3 text-sm">
           <Link href="/" onClick={() => setMobileOpen(false)}>
             Home
           </Link>
 
-          <div className="pt-2 border-t border-black/10">
+          <div className="pt-2 border-t border-white/10">
             <p className="text-xs uppercase text-gray-400 mb-2">Explore</p>
             <Link href="/beaches" onClick={() => setMobileOpen(false)}>
               Beaches
