@@ -96,13 +96,13 @@ export default function Home() {
               title: "Παραλία Βατερά",
               subtitle: "Η μεγαλύτερη παραλία του νησιού",
               img: "/vatera.jpg",
-              href: "/vatera",
+              href: "/beaches/vatera",
             },
             {
               title: "Πλωμάρι",
               subtitle: "Ούζο, θάλασσα & παράδοση",
               img: "/plomari.jpg",
-              href: "/plomari",
+              href: "/villages/plomari",
             },
           ].map((place) => (
             <div
