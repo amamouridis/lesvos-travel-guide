@@ -1,10 +1,11 @@
 import Link from "next/link";
 
+
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen bg-neutral-100 text-neutral-900">
 
-      {/* ================= HERO SECTION ================= */}
+      {/* ================= HERO ================= */}
       <section className="relative w-full h-screen bg-[url('/plomari2.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black/40" />
 
@@ -20,10 +21,10 @@ export default function Home() {
               </p>
 
               <Link
-                href="/beaches"
+                href="/explore"
                 className="inline-block mt-6 px-6 py-3 rounded-lg bg-yellow-600 text-white font-semibold hover:bg-yellow-700 transition"
               >
-                Ξεκινήστε την περιήγηση
+                Εξερεύνησε το νησί
               </Link>
             </div>
           </div>
@@ -46,16 +47,16 @@ export default function Home() {
             href: "/villages",
           },
           {
-            title: "Φύση & Πεζοπορίες",
+            title: "Φαγητό",
+            desc: "Ταβέρνες και τοπικές γεύσεις",
+            img: "/food.jpg",
+            href: "/food",
+          },
+          {
+            title: "Φύση",
             desc: "Μονοπάτια και φυσικά τοπία",
             img: "/nature.jpg",
             href: "/nature",
-          },
-          {
-            title: "Ταβέρνες & Φαγητό",
-            desc: "Αυθεντικές γεύσεις και τοπικά στέκια",
-            img: "/food.jpg",
-            href: "/food",
           },
         ].map((item) => (
           <Link
@@ -76,47 +77,32 @@ export default function Home() {
         ))}
       </section>
 
-      {/* ================= TRIP PLANNER ================= */}
-      <section className="w-full bg-white py-24">
+      {/* ================= TRIP PLANNER CTA ================= */}
+      <section className="w-full bg-white py-28">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
           {/* TEXT */}
           <div>
             <h2 className="text-3xl font-bold mb-4">
-              Φτιάξε το ταξίδι σου, μέρα-μέρα
+              Φτιάξε το πρόγραμμα των διακοπών σου
             </h2>
 
             <p className="text-gray-600 text-lg mb-8 max-w-xl">
-              Πόσες μέρες θα μείνεις στη Λέσβο; Δες προτάσεις προσαρμοσμένες
-              στον χρόνο σου και οργάνωσε εύκολα το πρόγραμμα των διακοπών σου.
+              Πες μας πού θα διαμείνεις και πόσες μέρες έχεις διαθέσιμες
+              και θα σου προτείνουμε ένα ρεαλιστικό πρόγραμμα,
+              προσαρμοσμένο στον χρόνο και την περιοχή σου.
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/planner/2-days"
-                className="px-6 py-3 rounded-lg bg-neutral-900 text-white font-semibold hover:bg-neutral-800 transition"
-              >
-                2 Μέρες
-              </Link>
-
-              <Link
-                href="/planner/3-days"
-                className="px-6 py-3 rounded-lg bg-neutral-900 text-white font-semibold hover:bg-neutral-800 transition"
-              >
-                3 Μέρες
-              </Link>
-
-              <Link
-                href="/planner/5-days"
-                className="px-6 py-3 rounded-lg bg-neutral-900 text-white font-semibold hover:bg-neutral-800 transition"
-              >
-                5+ Μέρες
-              </Link>
-            </div>
+            <Link
+              href="/planner"
+              className="inline-block px-8 py-4 rounded-xl bg-neutral-900 text-white font-semibold text-lg hover:bg-neutral-800 transition"
+            >
+              Ξεκίνα τον προγραμματισμό →
+            </Link>
           </div>
 
           {/* VISUAL */}
-          <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
             <img
               src="/map-lesvos.jpg"
               alt="Χάρτης Λέσβου"
@@ -143,7 +129,7 @@ export default function Home() {
               href: "/villages/molivos",
             },
             {
-              title: "Παραλία Βατερά",
+              title: "Βατερά",
               subtitle: "Η μεγαλύτερη παραλία του νησιού",
               img: "/vatera.jpg",
               href: "/beaches/vatera",
@@ -158,19 +144,20 @@ export default function Home() {
             <Link
               key={place.title}
               href={place.href}
-              className="relative rounded-xl overflow-hidden group cursor-pointer block"
+              className="relative rounded-xl overflow-hidden group block"
             >
               <img
                 src={place.img}
                 alt={place.title}
                 className="h-64 w-full object-cover group-hover:scale-105 transition duration-300"
               />
-
               <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 pointer-events-none">
                 <h3 className="text-white text-lg font-semibold">
                   {place.title}
                 </h3>
-                <p className="text-gray-200 text-sm">{place.subtitle}</p>
+                <p className="text-gray-200 text-sm">
+                  {place.subtitle}
+                </p>
               </div>
             </Link>
           ))}
@@ -179,12 +166,11 @@ export default function Home() {
 
       {/* ================= FOOTER ================= */}
       <footer className="mt-auto py-6 text-center text-gray-500 text-sm border-t border-black/10">
-        <p>
-          © 2025 Lesvos Travel Guide
-        </p>
+        <p>© 2025 Lesvos Travel Guide</p>
       </footer>
 
-    
+     
+
     </main>
   );
 }
