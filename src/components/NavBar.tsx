@@ -14,7 +14,7 @@ const toggleLanguage = isEnglish
 
 
 export default function NavBar() {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false)
   const [exploreOpen, setExploreOpen] = useState(false);
 
   return (
