@@ -101,7 +101,7 @@ export default function Home() {
           {
             title: "Πλωμάρι",
             subtitle: "Ούζο, θάλασσα & παράδοση",
-            img: "/plomari.jpg",
+            img: "/plomari2.jpg",
             href: "/villages/plomari",
           },
         ].map((place) => (
