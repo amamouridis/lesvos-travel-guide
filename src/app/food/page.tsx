@@ -12,18 +12,23 @@ export default function FoodPage() {
     <main className="bg-neutral-100 text-neutral-900">
 
       {/* HERO */}
-      <section className="bg-neutral-900 text-white py-20 text-center px-6">
-        <section 
-        className="w-full h-[50vh] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: `url('/ouzo.jpg')` }}
-      ></section>
-        <h1 className="text-4xl md:text-5xl font-bold">
-          Φαγητό στη Λέσβο
-        </h1>
-        <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
-          Ταβέρνες, εστιατόρια και τοπικές γεύσεις — επιλεγμένα μέρη που αξίζουν.
-        </p>
-      </section>
+<section
+  className="relative w-full h-[60vh] bg-cover bg-center flex items-center justify-center"
+  style={{ backgroundImage: "url('/ouzo.jpg')" }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/50" />
+
+  {/* Content */}
+  <div className="relative z-10 text-center px-6">
+    <h1 className="text-4xl md:text-5xl font-bold text-white">
+      Φαγητό στη Λέσβο
+    </h1>
+    <p className="mt-4 text-lg text-gray-200 max-w-2xl mx-auto">
+      Ταβέρνες, εστιατόρια και τοπικές γεύσεις — επιλεγμένα μέρη που αξίζουν.
+    </p>
+  </div>
+</section>
 
       {/* CATEGORIES */}
       <section className="max-w-6xl mx-auto px-6 py-16">
