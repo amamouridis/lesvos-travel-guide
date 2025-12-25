@@ -90,16 +90,19 @@ export default function Home() {
               title: "Μόλυβος",
               subtitle: "Μεσαιωνικό γραφικό χωριό",
               img: "/molivos.jpg",
+              href: "/destinations/molyvos",
             },
             {
               title: "Παραλία Βατερά",
               subtitle: "Η μεγαλύτερη παραλία του νησιού",
               img: "/vatera.jpg",
+              href: "/destinations/vatera",
             },
             {
               title: "Πλωμάρι",
               subtitle: "Ούζο, θάλασσα & παράδοση",
               img: "/plomari.jpg",
+              href: "/destinations/plomari",
             },
           ].map((place) => (
             <div
@@ -130,7 +133,7 @@ export default function Home() {
             href="https://amamouridis.github.io/portfolio/"
             className="text-blue-500 hover:underline"
           >
-            Angelos Mamouridis
+            X
           </a>
         </p>
       </footer>
