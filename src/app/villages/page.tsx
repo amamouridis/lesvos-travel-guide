@@ -25,6 +25,12 @@ const villages = [
     image: "/agiasos.jpg",
     href: "/villages/agiasos",
   },
+  {
+    name: "Μανταμάδος",
+    description: "Προστάτης της Λέσβου και παραδοσιακή ζωή",
+    image: "/mantamados.jpg",
+    href: "/villages/mantamados",
+  },
 ];
 
 export default function VillagesPage() {
