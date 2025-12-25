@@ -6,10 +6,8 @@ export default function Home() {
 
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full h-screen bg-[url('/plomari2.jpg')] bg-cover bg-center">
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/40" />
 
-        {/* Content */}
         <div className="relative z-10 h-full flex items-center">
           <div className="max-w-6xl mx-auto px-6">
             <div className="max-w-xl bg-black/40 backdrop-blur-md p-8 rounded-xl shadow-xl">
@@ -78,67 +76,115 @@ export default function Home() {
         ))}
       </section>
 
+      {/* ================= TRIP PLANNER ================= */}
+      <section className="w-full bg-white py-24">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+          {/* TEXT */}
+          <div>
+            <h2 className="text-3xl font-bold mb-4">
+              Φτιάξε το ταξίδι σου, μέρα-μέρα
+            </h2>
+
+            <p className="text-gray-600 text-lg mb-8 max-w-xl">
+              Πόσες μέρες θα μείνεις στη Λέσβο; Δες προτάσεις προσαρμοσμένες
+              στον χρόνο σου και οργάνωσε εύκολα το πρόγραμμα των διακοπών σου.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/planner/2-days"
+                className="px-6 py-3 rounded-lg bg-neutral-900 text-white font-semibold hover:bg-neutral-800 transition"
+              >
+                2 Μέρες
+              </Link>
+
+              <Link
+                href="/planner/3-days"
+                className="px-6 py-3 rounded-lg bg-neutral-900 text-white font-semibold hover:bg-neutral-800 transition"
+              >
+                3 Μέρες
+              </Link>
+
+              <Link
+                href="/planner/5-days"
+                className="px-6 py-3 rounded-lg bg-neutral-900 text-white font-semibold hover:bg-neutral-800 transition"
+              >
+                5+ Μέρες
+              </Link>
+            </div>
+          </div>
+
+          {/* VISUAL */}
+          <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src="/map-lesvos.jpg"
+              alt="Χάρτης Λέσβου"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/30" />
+          </div>
+
+        </div>
+      </section>
+
       {/* ================= FEATURED DESTINATIONS ================= */}
       <section className="w-full max-w-6xl mx-auto px-6 pb-24">
         <h2 className="text-2xl font-semibold mb-8">
           Κορυφαίοι Προορισμοί στη Λέσβο
         </h2>
 
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {[
-          {
-            title: "Μόλυβος",
-            subtitle: "Μεσαιωνικό γραφικό χωριό",
-            img: "/molivos.jpg",
-            href: "/villages/molivos",
-          },
-          {
-            title: "Παραλία Βατερά",
-            subtitle: "Η μεγαλύτερη παραλία του νησιού",
-            img: "/vatera.jpg",
-            href: "/beaches/vatera",
-          },
-          {
-            title: "Πλωμάρι",
-            subtitle: "Ούζο, θάλασσα & παράδοση",
-            img: "/plomari2.jpg",
-            href: "/villages/plomari",
-          },
-        ].map((place) => (
-          <Link
-            key={place.title}
-            href={place.href}
-            className="relative rounded-xl overflow-hidden group cursor-pointer block"
-          >
-            <img
-              src={place.img}
-              alt={place.title}
-              className="h-64 w-full object-cover group-hover:scale-105 transition duration-300"
-            />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Μόλυβος",
+              subtitle: "Μεσαιωνικό γραφικό χωριό",
+              img: "/molivos.jpg",
+              href: "/villages/molivos",
+            },
+            {
+              title: "Παραλία Βατερά",
+              subtitle: "Η μεγαλύτερη παραλία του νησιού",
+              img: "/vatera.jpg",
+              href: "/beaches/vatera",
+            },
+            {
+              title: "Πλωμάρι",
+              subtitle: "Ούζο, θάλασσα & παράδοση",
+              img: "/plomari2.jpg",
+              href: "/villages/plomari",
+            },
+          ].map((place) => (
+            <Link
+              key={place.title}
+              href={place.href}
+              className="relative rounded-xl overflow-hidden group cursor-pointer block"
+            >
+              <img
+                src={place.img}
+                alt={place.title}
+                className="h-64 w-full object-cover group-hover:scale-105 transition duration-300"
+              />
 
-            <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 pointer-events-none">
-              <h3 className="text-white text-lg font-semibold">
-                {place.title}
-              </h3>
-              <p className="text-gray-200 text-sm">{place.subtitle}</p>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </section>
+              <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 pointer-events-none">
+                <h3 className="text-white text-lg font-semibold">
+                  {place.title}
+                </h3>
+                <p className="text-gray-200 text-sm">{place.subtitle}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {/* ================= FOOTER ================= */}
       <footer className="mt-auto py-6 text-center text-gray-500 text-sm border-t border-black/10">
         <p>
-          © 2025 Lesvos Travel Guide • Designed & Developed by {""}
-          <a
-            href="https://amamouridis.github.io/portfolio/"
-            className="text-blue-500 hover:underline"
-          >
-            X
-          </a>
+          © 2025 Lesvos Travel Guide
         </p>
       </footer>
+
+    
     </main>
   );
 }
