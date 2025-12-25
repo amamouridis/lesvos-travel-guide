@@ -14,7 +14,7 @@ export default function LimanakiPamfilonPage() {
       {/* ================= HERO ================= */}
       <section className="relative h-[70vh] w-full">
         <Image
-          src="/limanaki-pamfilon.jpg"
+          src="/limanaki_pamf.jpg"
           alt="Το Λιμανάκι των Παμφίλων"
           fill
           className="object-cover"
