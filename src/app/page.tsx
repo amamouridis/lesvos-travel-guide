@@ -125,7 +125,7 @@ export default function Home() {
       {/* ================= FOOTER ================= */}
       <footer className="mt-auto py-6 text-center text-gray-500 text-sm border-t border-black/10">
         <p>
-          © 2025 Lesvos Travel Guide • Designed & Developed by{""}
+          © 2025 Lesvos Travel Guide • Designed & Developed by {""}
           <a
             href="https://amamouridis.github.io/portfolio/"
             className="text-blue-500 hover:underline"
