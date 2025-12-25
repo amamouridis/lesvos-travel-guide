@@ -14,7 +14,7 @@ export default function PlomariPage() {
       {/* HERO */}
       <section className="relative h-[60vh] w-full">
         <Image
-          src="/plomari1.jpg"
+          src="/plomari2.jpg"
           alt="Πλωμάρι Λέσβος"
           fill
           className="object-cover"
