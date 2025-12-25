@@ -16,7 +16,7 @@ const villages = [
   {
     name: "Πλωμάρι",
     description: "Ούζο, θάλασσα & παράδοση",
-    image: "/plomari.jpg",
+    image: "/plomari2.jpg",
     href: "/villages/plomari",
   },
   {
