@@ -65,7 +65,7 @@ export default function FoodPage() {
               {/* Image */}
               <div className="w-24 h-24 relative">
                 <Image
-                  src="/limanaki-pamf.jpg"
+                  src="/limanaki_pamf.jpg"
                   alt="Το Λιμανάκι των Παμφίλων"
                   fill
                   className="object-cover rounded-lg"
