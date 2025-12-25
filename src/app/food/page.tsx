@@ -87,7 +87,7 @@ export default function FoodPage() {
                 </p>
 
                 <Link
-                  href="/food/limanaki-pamfilon"
+                  href="/food/limanaki_pamfilon"
                   className="text-sm text-blue-600 hover:underline mt-2 inline-block"
                 > 
                   Δείτε λεπτομέρειες →
