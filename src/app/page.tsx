@@ -5,7 +5,7 @@ export default function Home() {
     <main className="flex flex-col min-h-screen bg-neutral-100 text-neutral-900">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative w-full h-screen bg-[url('/petra.jpg')] bg-cover bg-center">
+      <section className="relative w-full h-screen bg-[url('/plomari2.jpg')] bg-cover bg-center">
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40" />
 
