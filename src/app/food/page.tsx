@@ -13,6 +13,10 @@ export default function FoodPage() {
 
       {/* HERO */}
       <section className="bg-neutral-900 text-white py-20 text-center px-6">
+        <section 
+        className="w-full h-[50vh] bg-cover bg-center flex items-center justify-center"
+        style={{ backgroundImage: `url('/ouzo.jpg')` }}
+      ></section>
         <h1 className="text-4xl md:text-5xl font-bold">
           Φαγητό στη Λέσβο
         </h1>
