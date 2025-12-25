@@ -90,19 +90,19 @@ export default function Home() {
               title: "Μόλυβος",
               subtitle: "Μεσαιωνικό γραφικό χωριό",
               img: "/molivos.jpg",
-              href: "/destinations/molyvos",
+              href: "/molivos",
             },
             {
               title: "Παραλία Βατερά",
               subtitle: "Η μεγαλύτερη παραλία του νησιού",
               img: "/vatera.jpg",
-              href: "/destinations/vatera",
+              href: "/vatera",
             },
             {
               title: "Πλωμάρι",
               subtitle: "Ούζο, θάλασσα & παράδοση",
               img: "/plomari.jpg",
-              href: "/destinations/plomari",
+              href: "/plomari",
             },
           ].map((place) => (
             <div
