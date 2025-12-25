@@ -90,7 +90,7 @@ export default function Home() {
             title: "Μόλυβος",
             subtitle: "Μεσαιωνικό γραφικό χωριό",
             img: "/molivos.jpg",
-            href: "/molivos",
+            href: "/villages/molivos",
           },
           {
             title: "Παραλία Βατερά",
