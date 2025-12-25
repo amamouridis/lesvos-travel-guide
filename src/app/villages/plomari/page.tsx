@@ -76,7 +76,7 @@ export default function PlomariPage() {
               <li>
                 🏖{" "}
                 <Link href="/beaches/vatera" className="text-blue-600 hover:underline">
-                  Παραλία Βατερά
+                  Βατερά
                 </Link>
               </li>
               <li>🏖 Μελίντα</li>
