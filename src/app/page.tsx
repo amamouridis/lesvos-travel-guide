@@ -84,46 +84,48 @@ export default function Home() {
           Κορυφαίοι Προορισμοί στη Λέσβο
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Μόλυβος",
-              subtitle: "Μεσαιωνικό γραφικό χωριό",
-              img: "/molivos.jpg",
-              href: "/molivos",
-            },
-            {
-              title: "Παραλία Βατερά",
-              subtitle: "Η μεγαλύτερη παραλία του νησιού",
-              img: "/vatera.jpg",
-              href: "/beaches/vatera",
-            },
-            {
-              title: "Πλωμάρι",
-              subtitle: "Ούζο, θάλασσα & παράδοση",
-              img: "/plomari.jpg",
-              href: "/villages/plomari",
-            },
-          ].map((place) => (
-            <div
-              key={place.title}
-              className="relative rounded-xl overflow-hidden group"
-            >
-              <img
-                src={place.img}
-                alt={place.title}
-                className="h-64 w-full object-cover group-hover:scale-105 transition"
-              />
-              <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4">
-                <h3 className="text-white text-lg font-semibold">
-                  {place.title}
-                </h3>
-                <p className="text-gray-200 text-sm">{place.subtitle}</p>
-              </div>
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          {
+            title: "Μόλυβος",
+            subtitle: "Μεσαιωνικό γραφικό χωριό",
+            img: "/molivos.jpg",
+            href: "/molivos",
+          },
+          {
+            title: "Παραλία Βατερά",
+            subtitle: "Η μεγαλύτερη παραλία του νησιού",
+            img: "/vatera.jpg",
+            href: "/beaches/vatera",
+          },
+          {
+            title: "Πλωμάρι",
+            subtitle: "Ούζο, θάλασσα & παράδοση",
+            img: "/plomari.jpg",
+            href: "/villages/plomari",
+          },
+        ].map((place) => (
+          <Link
+            key={place.title}
+            href={place.href}
+            className="relative rounded-xl overflow-hidden group cursor-pointer block"
+          >
+            <img
+              src={place.img}
+              alt={place.title}
+              className="h-64 w-full object-cover group-hover:scale-105 transition duration-300"
+            />
+
+            <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 pointer-events-none">
+              <h3 className="text-white text-lg font-semibold">
+                {place.title}
+              </h3>
+              <p className="text-gray-200 text-sm">{place.subtitle}</p>
             </div>
-          ))}
-        </div>
-      </section>
+          </Link>
+        ))}
+      </div>
+    </section>
 
       {/* ================= FOOTER ================= */}
       <footer className="mt-auto py-6 text-center text-gray-500 text-sm border-t border-black/10">
