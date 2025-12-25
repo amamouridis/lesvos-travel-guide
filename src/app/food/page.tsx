@@ -67,7 +67,6 @@ export default function FoodPage() {
                 <Image
                   src="/limanaki_pamf.jpg"
                   alt="Το Λιμανάκι των Παμφίλων"
-                  fill
                   className="object-cover rounded-lg"
                 />
               </div>
