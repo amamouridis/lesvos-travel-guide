@@ -14,7 +14,7 @@ export default function FoodPage() {
       {/* HERO */}
 <section
   className="relative w-full h-[60vh] bg-cover bg-center flex items-center justify-center"
-  style={{ backgroundImage: "url('/ouzo.jpg')" }}
+  style={{ backgroundImage: "url('/food1.jpg')" }}
 >
   {/* Overlay */}
   <div className="absolute inset-0 bg-black/50" />
